@@ -108,7 +108,9 @@ if($data) {
 	generate($participantes);
 }
 else {
-	echo "No data was found!";
+	echo '<div class="alert alert-danger" role="alert">
+	No register found!
+  </div>';
 }
 
 ?>

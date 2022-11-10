@@ -44,5 +44,5 @@ $json[] = [
 if(!empty($json)) {
     $json = json_encode($json);
     file_put_contents('participantes.json', $json);
-    header('Location: admin.php?msg=Sucesso');
+    header('Location: admin.php?msg=Cadastrado com sucesso!');
 }

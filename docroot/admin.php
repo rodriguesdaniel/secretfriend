@@ -27,7 +27,17 @@
 
 	<main class="px-3">
 		<section class="mb-auto">
-			<h3 class="mb-3 text-left">Admin Área</h3>
+    <?php
+      @$msg = $_GET['msg'];
+    
+      if(!empty($msg)){
+        echo '<div class="alert alert-danger" role="alert">
+          ' . $msg . '
+        </div>';
+      }
+    ?>
+
+			<h3 class="mb-3 text-left">Cadastre-se</h3>
 
 			<div class="container">
 				<div class="row">

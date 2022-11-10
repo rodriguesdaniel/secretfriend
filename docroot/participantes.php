@@ -12,11 +12,15 @@ if ($data === null) {
 }
 
 if(!empty($data)) {
+  echo '<div class="col col-12">';
+  echo '<ul class="list-group list-group-horizontal">';
   foreach ($data as $value) {
-    echo '<div class="col col-6 col-md-4">';
+    echo '<li class="flex-fill list-group-item">';
     echo $value['name'];
-    echo '</div>';
+    echo '</li>';
   }
+
+  echo '</ul></div>';
 }
 else {
   echo "<p class=\"text-center\">Nenhum participante cadastrado!</p>";
