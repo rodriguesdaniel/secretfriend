@@ -8,7 +8,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <script>
-    var password = prompt("Enter in the password");
+    /* var password = prompt("Enter in the password");
         if (password=="1234") {
             //location = "media.html"
             window.location.href="admin.php?status=logged";
@@ -16,34 +16,34 @@
         }
         else{
           window.location.href="./";
-        }
+        } */
   </script>
 </head>
 <body class="d-flex h-100 text-center text-bg-dark">
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="mb-auto">
-    <div>
-      <h3 class="float-md-start mb-0">Amigo Secreto</h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="./">Home</a>
-        <a class="nav-link fw-bold py-1 px-0" href="admin.php">Admin</a>
-        <a class="nav-link fw-bold py-1 px-0" href="contato.php">Contato</a>
-      </nav>
-    </div>
+    <?php include('nav.php');?>
   </header>
 
 	<main class="px-3">
-		<section class="mb-5">
-			<h1>Bóra modernizar esse amigo secreto?</h1>
-			<p class="lead">Chega de #fraude =)</p>
-		</section>
-
 		<section class="mb-auto">
-			<h3 class="mb-3">Admin Área</h3>
+			<h3 class="mb-3 text-left">Admin Área</h3>
 
-			<div class="container text-center">
+			<div class="container">
 				<div class="row">
-
+        <form action="add.php" method="POST">
+          <div class="row">
+            <div class="col col-12 mb-3">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="col col-12 mb-3">
+              <input type="number" class="form-control" id="whatsapp" name="whatsapp" placeholder="Whatsapp" autocomplete="off" required>
+            </div>
+            <div class="col col-12 mb-3 d-grid">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
 				</div>
 			</div>
 		</section>

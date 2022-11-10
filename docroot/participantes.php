@@ -1,17 +1,23 @@
 <?php
 
-$string = file_get_contents("amigo_secreto.json");
+$file = 'participantes.json';
+$string = file_get_contents($file);
 if ($string === false) {
     // deal with error...
 }
 
-$json_a = json_decode($string, true);
-if ($json_a === null) {
+$data = json_decode($string, true);
+if ($data === null) {
     // deal with error...
 }
 
-foreach ($json_a as $person_name => $person_a) {
-  echo '<div class="col col-6 col-md-4">';
-	echo $person_a['friend'];
-  echo '</div>';
+if(!empty($data)) {
+  foreach ($data as $value) {
+    echo '<div class="col col-6 col-md-4">';
+    echo $value['name'];
+    echo '</div>';
+  }
+}
+else {
+  echo "<p class=\"text-center\">Nenhum participante cadastrado!</p>";
 }
