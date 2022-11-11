@@ -40,7 +40,7 @@
 			<div class="container text-center">
 				<div class="row">
                 <p class="lead">
-                    <a href="sorteio.php" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Executar</a>
+                    <a href="sorteio.php?action=generate" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Executar</a>
                 </p>
 				</div>
 			</div>
