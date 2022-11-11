@@ -1,3 +1,6 @@
 # Ignore json data files
 docroot/participantes.json
 docroot/amigo_secreto.json
+
+# Ignore
+/_backups
