@@ -44,13 +44,13 @@
         <form action="add.php" method="POST">
           <div class="row">
             <div class="col col-12 mb-3">
-              <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Nome" required>
             </div>
             <div class="col col-12 mb-3">
-              <input type="number" class="form-control" id="whatsapp" name="whatsapp" placeholder="Whatsapp" autocomplete="off" required>
+              <input type="number" class="form-control" id="whatsapp" name="whatsapp" placeholder="Whatsapp DDD + Número" autocomplete="off" required>
             </div>
             <div class="col col-12 mb-3 d-grid">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Salvar</button>
             </div>
           </div>
         </form>

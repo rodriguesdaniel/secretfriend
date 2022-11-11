@@ -13,9 +13,9 @@ if ($data === null) {
 
 if(!empty($data)) {
   echo '<div class="col col-12">';
-  echo '<ul class="list-group list-group-horizontal">';
+  echo '<ul class="names">';
   foreach ($data as $value) {
-    echo '<li class="flex-fill list-group-item">';
+    echo '<li>';
     echo $value['name'];
     echo '</li>';
   }
