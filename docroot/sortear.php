@@ -1,3 +1,12 @@
+<?php
+
+  @$mode = addslashes($_GET['mode']);
+
+  if ($mode !== 'admin') {
+     header('Location:./');
+   }
+
+?>
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 <head>
