@@ -40,7 +40,10 @@
 			<div class="container text-center">
 				<div class="row">
                 <p class="lead">
-                    <a href="sorteio.php?action=generate" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Executar</a>
+                    <form method="POST" action="sorteio.php">
+                      <button type="submit" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Executar</button>
+                      <input type="hidden" value="generate" name="action">
+                    </form>
                 </p>
 				</div>
 			</div>
