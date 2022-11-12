@@ -7,22 +7,11 @@
   <title>Amigo Secreto</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <script>
-    /* var password = prompt("Enter in the password");
-        if (password=="1234") {
-            //location = "media.html"
-            window.location.href="admin.php?status=logged";
-
-        }
-        else{
-          window.location.href="./";
-        } */
-  </script>
 </head>
 <body class="d-flex h-100 text-center text-bg-dark">
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="mb-auto">
-    <?php include('nav.php');?>
+    <?php include('includes/nav.php');?>
   </header>
 
 	<main class="px-3">
