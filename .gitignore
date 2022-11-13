@@ -2,5 +2,7 @@
 docroot/participantes.json
 docroot/amigo_secreto.json
 
-# Ignore
+# Trash
 /_backups
+/.docksal
+/.vscode
