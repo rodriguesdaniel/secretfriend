@@ -28,13 +28,15 @@
 			$action = isset($_POST['action']);
 
 			function showDataPage($action) {
+				$file = new Parse();
+
 				if ($action == 'generate') {
 					$prize = new Prize();
-					$prize->generate();
+					$participantes = $file->getFileData('participantes.json');
+					$prize->generate($participantes);
 					return;
 				}
 
-				$file = new Parse();
 				$result = $file->getFileData();
 				$file->showResults($result);
 			}
