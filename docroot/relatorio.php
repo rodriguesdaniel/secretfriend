@@ -22,27 +22,11 @@
 	<main class="px-3">
 		<?php
 			require 'autoload.php';
-			ob_start();
-			use classes\Prize\Prize;
 			use classes\File\Parse;
+			$file = new Parse();
+			$result = $file->getFileData();
+			$file->showResults($result);
 
-			@$action = $_POST['action'];
-
-			function showDataPage($action) {
-				$file = new Parse();
-
-				if ($action == 'generate') {
-					$prize = new Prize();
-					$participantes = $file->getFileData('participantes.json');
-					$prize->generate($participantes);
-					header('Location: relatorio.php?mode=admin');
-					return;
-				}
-
-				header('Location: sortear.php?mode=admin&msg=Acesso não autorizado');
-			}
-
-			showDataPage($action);
 		?>
 	</main>
 	<footer class="mt-auto text-white-50">

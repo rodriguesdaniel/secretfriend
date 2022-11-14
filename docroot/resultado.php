@@ -1,5 +1,6 @@
 <?php
   $id_participante = $_GET['id'];
+  $hash = $_GET['hash'];
 ?>
 
 <!DOCTYPE html>
@@ -37,25 +38,21 @@
 	<main class="px-3">
     
 <?php
-  $string = file_get_contents("amigo_secreto.json");
-  if ($string === false) {
-      // deal with error...
-  }
+  require 'autoload.php';
+  use classes\File\Parse;
+  $file = new Parse();
+  $result = $file->getFileData();
 
-  $json_a = json_decode($string, true);
-  if ($json_a === null) {
-      // deal with error...
-  }
-
-  foreach ($json_a as $key => $person) {
-      if($id_participante == $person['id']) {
+  foreach ($result as $key => $person) {
+      if($id_participante == $person['id'] && $hash == $person['hash']) {
         echo '<h4>Olá ' . $person['name'] . ', seu amigo é...</h4>';
 
         echo '<div class="alert alert-warning mt-3" role="alert">';
         echo '<h3>'.$person['friend'].'</h3>';
-        echo '</div>';
-
-        
+        echo '</div>';        
+      }
+      else {
+        //header('Location: index.php?msg=URL não permitido');
       }
   }
 ?>
