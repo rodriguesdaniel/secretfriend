@@ -52,7 +52,7 @@ class Parse {
         $total = count($result);
         $duplicados = 0;
         
-        $url_result = 'https://www.ydeia.com/amigosecreto/resultado.php?id=';
+        $url_result = 'https://www.ydeia.com/amigosecreto/resultado.php?page=r&id=';
 		$pattern = '/19/i';
 		$pattern2 = '/55/i';
 		$prefix = '';
@@ -81,13 +81,11 @@ class Parse {
             $friend = trim($data['friend']);
             $hash = $data['hash'];
 
-            $message = '*Hora%20de%20conhecer%20o%20seu%20Amigo%20Secreto.*%20';
-            $message .= 'Clique%20no%20link%20abaixo%20';
-            $message .= $url_result;
+            $message = '*Olá%20'.$name.'.%20Hora%20de%20conhecer%20o%20seu%20Amigo%20Secreto.*%20';
+            $message .= 'Clique%20no%20link%20abaixo:%20';
+            $message .= urlencode($url_result);
             $message .= $id;
             $message .= urlencode('&hash='.$hash);
-
-            //text=Hora%20de%20conhecer%20seu%20amigo%20Secreto.%20https%3A%2F%2Fwww.domain.com%2Famigosecreto%2Fresultado.php%3Fid%3D1%26hash%3D02b8ba97a0530cd5372f296f6fa2b28c
 
 			if (preg_match($pattern, $whatsapp) == 0) {
 				$prefix = '5519';
