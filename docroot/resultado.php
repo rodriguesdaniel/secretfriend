@@ -52,7 +52,7 @@
         echo '</div>';        
       }
       else {
-        //header('Location: index.php?msg=URL não permitido');
+        header('Location: index.php?msg=URL não permitido');
       }
   }
 ?>
