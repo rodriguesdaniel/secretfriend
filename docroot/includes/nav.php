@@ -1,5 +1,5 @@
 <?php 
-    $page = $_GET['page'];
+    @$page = $_GET['page'];
 ?>
 <div>
     <h3 class="float-md-start mb-0">Amigo Secreto | A Grande Família</h3>

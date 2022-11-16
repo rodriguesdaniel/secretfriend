@@ -1,3 +1,13 @@
+<?php
+
+@$mode = addslashes($_GET['mode']);
+
+if (empty($mode)) {
+  header('Location: index.php?msg=Acesso não autorizado');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 <head>

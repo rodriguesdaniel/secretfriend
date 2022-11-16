@@ -21,8 +21,22 @@
 
 	<main class="px-3">
 		<section class="mb-5">
+			<?php
+				@$msg = $_GET['msg'];
+				
+				if (!empty($msg)) {
+					echo '<div class="alert alert-danger" role="alert">
+					<h2>
+					' . $msg . '
+					</h2>
+					</div>';
+				}else {
+
+			?>
 			<h1>Bóra modernizar esse amigo secreto?</h1>
 			<p class="lead">Chega de #fraude =)</p>
+
+			<?php } ?>
 		</section>
 
 		<section class="mb-auto">

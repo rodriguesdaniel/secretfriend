@@ -1,6 +1,11 @@
 <?php
   $id_participante = $_GET['id'];
   $hash = $_GET['hash'];
+  $date = $_GET['date'];
+
+  if (empty($date)) {
+    header('Location: index.php?msg=Sorteio inválido!');
+  }
 ?>
 
 <!DOCTYPE html>
@@ -62,6 +67,8 @@
         break;        
       }
   }
+
+  echo  'Sorteio realizado em: ' . date("d/m/Y", strtotime($date));
   
   if (!$validated) {
     header('Location: index.php?msg=URL não permitido');

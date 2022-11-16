@@ -80,12 +80,14 @@ class Parse {
             $whatsapp = trim($data['whatsapp']);
             $friend = trim($data['friend']);
             $hash = $data['hash'];
+            $date =  date('Y/m/d');
 
             $message = '*Olá%20'.$name.'.%20Hora%20de%20conhecer%20o%20seu%20Amigo%20Secreto.*%20';
             $message .= 'Clique%20no%20link%20abaixo:%20';
             $message .= urlencode($url_result);
             $message .= $id;
             $message .= urlencode('&hash='.$hash);
+            $message .= urlencode('&date='.$date);
 
 			if (preg_match($pattern, $whatsapp) == 0) {
 				$prefix = '5519';
@@ -95,7 +97,8 @@ class Parse {
 			}
 
 			echo '<li class="flex-fill">';
-			echo $name . '-' . $friend . '<br>';
+			echo $name . '<br>' ;
+            //$friend . '<br>';
 			echo '<a href="'.$url_whatsapp.$prefix.$whatsapp.'&text='.$message.'" target="_blank" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Link</a>';
 			echo '</li>';
 		}
